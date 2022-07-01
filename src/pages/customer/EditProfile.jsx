@@ -164,7 +164,8 @@ const EditProfile = () => {
             </div>
             <div className="flex flex-col items-center">
               {/* <img src={imgBlank} alt="" className="w-72 rounded-md" /> */}
-              {preview === "http://localhost:5000/uploads/null" ? (
+              {preview ===
+              "https://res.cloudinary.com/dgmgol0a2/image/upload/v1656680361/null" ? (
                 <div>
                   <img
                     src={Blank}
