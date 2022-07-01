@@ -95,7 +95,8 @@ const Profile = () => {
             <div className="flex flex-col items-center">
               {!isLoading ? (
                 <>
-                  {profile.image !== "http://localhost:5000/uploads/null" ? (
+                  {profile.image !==
+                  "https://res.cloudinary.com/dgmgol0a2/image/upload/v1656680361/null" ? (
                     <>
                       <img
                         className="w-64 rounded-md mb-2"

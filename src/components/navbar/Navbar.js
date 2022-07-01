@@ -255,7 +255,7 @@ export default function Navbar() {
                       <Menu.Button className="max-w-xs border-brand-font-color border-2 bg-brand-font-color rounded-full flex items-center text-sm focus:border-card-color">
                         <span className="sr-only">Open user menu</span>
                         {profile.image !==
-                        "http://localhost:5000/uploads/null" ? (
+                        "https://res.cloudinary.com/dgmgol0a2/image/upload/v1656680361/null" ? (
                           <>
                             <img
                               className="h-12 w-12 object-cover rounded-full"
