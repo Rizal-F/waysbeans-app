@@ -155,7 +155,7 @@ const Cart = () => {
 
       const body = JSON.stringify(data);
       const response = await API.post("/transaction/", body, config);
-      setOpenAddCart(true);
+      // setOpenAddCart(true);
 
       // navigate("/profile");
       // console.log(response);
@@ -168,11 +168,13 @@ const Cart = () => {
           /* You may add your own implementation here */
           console.log(result);
           //  navigate("/profile");
+          setOpenAddCart(true);
         },
         onPending: function (result) {
           /* You may add your own implementation here */
           console.log(result);
           //  navigate("/profile");
+          setOpenAddCart(true);
         },
         onError: function (result) {
           /* You may add your own implementation here */
