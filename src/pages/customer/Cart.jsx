@@ -158,7 +158,7 @@ const Cart = () => {
       // setOpenAddCart(true);
 
       // navigate("/profile");
-      // console.log(response);
+      console.log(response);
 
       const token = response.data.payment.token;
 
