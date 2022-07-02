@@ -25,7 +25,7 @@ export default function Complain() {
 
   useEffect(() => {
     // get auth and query
-    socket = io("https://rest-api-waysbeans.herokuapp.com", {
+    socket = io("https://dumbmerch-api-be.herokuapp.com", {
       auth: {
         token: localStorage.getItem("token"),
       },
