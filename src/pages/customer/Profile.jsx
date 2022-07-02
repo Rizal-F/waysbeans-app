@@ -198,7 +198,7 @@ const Profile = () => {
                           {item.products?.map((product, index) => (
                             <img
                               className="w-24 rounded-sm my-5"
-                              src={`http://localhost:5000/uploads/${product.image}`}
+                              src={`https://res.cloudinary.com/dgmgol0a2/image/upload/v1656680361/${product.image}`}
                               alt="product"
                             />
                           ))}
