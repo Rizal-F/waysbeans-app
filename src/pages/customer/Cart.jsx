@@ -160,30 +160,30 @@ const Cart = () => {
       // navigate("/profile");
       // console.log(response);
 
-      //  const token = response.data.payment.token;
+      const token = response.data.payment.token;
 
-      //  // // Init Snap for display payment page with token here ...
-      //  window.snap.pay(token, {
-      //    onSuccess: function (result) {
-      //      /* You may add your own implementation here */
-      //      console.log(result);
-      //      navigate("/profile");
-      //    },
-      //    onPending: function (result) {
-      //      /* You may add your own implementation here */
-      //      console.log(result);
-      //      navigate("/profile");
-      //    },
-      //    onError: function (result) {
-      //      /* You may add your own implementation here */
-      //      console.log(result);
-      //    },
-      //    onClose: function () {
-      //      /* You may add your own implementation here */
-      //      API.delete(`/transaction/${response.data.id}`);
-      //      alert("you closed the popup without finishing the payment");
-      //    },
-      //  });
+      // // Init Snap for display payment page with token here ...
+      window.snap.pay(token, {
+        onSuccess: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+          //  navigate("/profile");
+        },
+        onPending: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+          //  navigate("/profile");
+        },
+        onError: function (result) {
+          /* You may add your own implementation here */
+          console.log(result);
+        },
+        onClose: function () {
+          /* You may add your own implementation here */
+          API.delete(`/transaction/${response.data.id}`);
+          alert("you closed the popup without finishing the payment");
+        },
+      });
     } catch (error) {
       console.log(error);
     }
@@ -203,20 +203,20 @@ const Cart = () => {
     // sendMessage();
     getQty();
     //   console.log(postcode);
-    //   const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
-    //   //change this according to your client-key
-    //   const myMidtransClientKey = "Client key here ...";
+    const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
+    //change this according to your client-key
+    const myMidtransClientKey = "SB-Mid-client-pqxbQKlhow9771qF";
 
-    //   let scriptTag = document.createElement("script");
-    //   scriptTag.src = midtransScriptUrl;
-    //   // optional if you want to set script attribute
-    //   // for example snap.js have data-client-key attribute
-    //   scriptTag.setAttribute("data-client-key", myMidtransClientKey);
+    let scriptTag = document.createElement("script");
+    scriptTag.src = midtransScriptUrl;
+    // optional if you want to set script attribute
+    // for example snap.js have data-client-key attribute
+    scriptTag.setAttribute("data-client-key", myMidtransClientKey);
 
-    //   document.body.appendChild(scriptTag);
-    //   return () => {
-    //     document.body.removeChild(scriptTag);
-    //   };
+    document.body.appendChild(scriptTag);
+    return () => {
+      document.body.removeChild(scriptTag);
+    };
   }, []);
 
   return (
