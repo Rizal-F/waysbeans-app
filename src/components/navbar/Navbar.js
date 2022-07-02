@@ -68,7 +68,7 @@ export default function Navbar() {
       };
       const response = await API.get("/cart/" + state.user.id, config);
       setQtyCart(response.data.data);
-      // console.log(response.data.data);
+      console.log(response.data.data);
     } catch (error) {
       // console.log(error);
     }
@@ -239,11 +239,11 @@ export default function Navbar() {
                       className="mx-5 w-8 cursor-pointer"
                       alt=""
                     />
-                    {qtyCart.length > 0 ? (
+                    {/* {qtyCart.length > 0 ? (
                       <div className="w-5 h-5 text-xs text-white font-bold bg-red-600 rounded-full absolute top-5 right-40 flex justify-center items-center">
                         {qtyCart.length}
                       </div>
-                    ) : null}
+                    ) : null} */}
                   </div>
                 ) : (
                   <div> </div>
