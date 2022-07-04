@@ -25,7 +25,8 @@ export default function Chat({
               <>
                 <img
                   src={
-                    "http://localhost:5000/uploads/" + contact.profile?.image
+                    "https://res.cloudinary.com/dgmgol0a2/image/upload/v1656680361/" +
+                    contact.profile?.image
                   }
                   className="rounded-full mx-5 img-chat"
                   alt="bubble avatar"

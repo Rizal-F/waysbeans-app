@@ -99,8 +99,6 @@ export default function Complain() {
     }
   };
 
-  // console.log(contacts);
-
   return (
     <>
       <Navbar />
