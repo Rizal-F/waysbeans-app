@@ -90,6 +90,12 @@ const AdminDashboard = () => {
           <img className="w-5 mx-24" src={Cencel} />
         </div>
       );
+    } else if (props.props.status == "failed") {
+      component = (
+        <div className="flex flex-col">
+          <img className="w-5 mx-24" src={Cencel} />
+        </div>
+      );
     } else if (props.props.status == "success") {
       component = (
         <div className="flex flex-col">
@@ -116,6 +122,12 @@ const AdminDashboard = () => {
         </td>
       );
     } else if (props.props == "cancel") {
+      component = (
+        <td className="text-red-700 flex flex-col items-center text-center mx-2">
+          {props.props}
+        </td>
+      );
+    } else if (props.props == "failed") {
       component = (
         <td className="text-red-700 flex flex-col items-center text-center mx-2">
           {props.props}
